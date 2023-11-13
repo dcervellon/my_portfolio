@@ -40,7 +40,7 @@ const Project = async () => {
                 </Link>
 
                 <Link
-                  href={project.attributes.links.vercel}
+                  href={project.attributes.links.deploy}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
