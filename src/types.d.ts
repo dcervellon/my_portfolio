@@ -40,7 +40,7 @@ export interface ProjectsProps {
         url: string;
         links: {
           github: string;
-          vercel: string;
+          deploy: string;
         };
         technologies: {
           technologies: string[];

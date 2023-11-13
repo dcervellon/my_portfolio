@@ -13,11 +13,8 @@ const Project = async () => {
     <div>
       {data.map((project, index) => {
         return (
-          <div
-            key={project.id}
-            className="my-20"
-          >
-            <div className="md:w-8/12 mx-auto text-start md:text-3xl my-4">
+          <div key={project.id} className="my-20">
+            <div className="md:w-12/12 mx-auto text-start md:text-3xl my-4">
               <h2 className="text-[#0087d1] font-black">
                 <span>{index + 1}. </span>
                 {project.attributes.title}:
@@ -26,7 +23,7 @@ const Project = async () => {
                 </span>
               </h2>
 
-              <div className="flex w-6/12 space-x-4 mt-2">
+              <div className="flex w-6/12 space-x-4 mt-2 items-center py-1">
                 <Link
                   href={project.attributes.links.github}
                   target="_blank"
@@ -34,22 +31,26 @@ const Project = async () => {
                 >
                   <FaGithubSquare
                     size={25}
-                    color="#3b434a"
+                    color="#7F8487"
                     className="cursor-pointer"
                   />
                 </Link>
 
                 <Link
-                  href={project.attributes.links.vercel}
+                  href={project.attributes.links.deploy}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <BsGlobe2
                     size={25}
-                    color="#3b434a"
+                    color="#7F8487"
                     className="cursor-pointer"
                   />
                 </Link>
+                <div className="flex text-base space-x-1 text-gray-200">
+                  <p className="bg-[#7f8487] rounded-md px-2">React JS</p>
+                  <p className="bg-[#7f8487] rounded-md px-2">Tailwind CSS</p>
+                </div>
               </div>
             </div>
 

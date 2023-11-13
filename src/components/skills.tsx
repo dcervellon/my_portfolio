@@ -23,6 +23,7 @@ const Skills = async () => {
                 className="w-16 md:w-18 h-16 md:h-18 hover:scale-110 duration-300 my-4"
               />
             </div>
+
           );
         })}
       </div>
