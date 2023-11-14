@@ -43,7 +43,7 @@ export interface ProjectsProps {
           deploy: string;
         };
         technologies: {
-          technologies: string[];
+          techs: string[];
         };
         image: {
           data: {

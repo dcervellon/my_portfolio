@@ -13,11 +13,8 @@ const Project = async () => {
     <div>
       {data.map((project, index) => {
         return (
-          <div
-            key={project.id}
-            className="my-20"
-          >
-            <div className="md:w-8/12 mx-auto text-start md:text-3xl my-4">
+          <div key={project.id} className="my-20">
+            <div className="md:w-12/12 mx-auto text-start md:text-3xl my-4">
               <h2 className="text-[#0087d1] font-black">
                 <span>{index + 1}. </span>
                 {project.attributes.title}:
@@ -26,7 +23,7 @@ const Project = async () => {
                 </span>
               </h2>
 
-              <div className="flex w-6/12 space-x-4 mt-2">
+              <div className="flex w-12/12 space-x-4 mt-2 items-center py-1">
                 <Link
                   href={project.attributes.links.github}
                   target="_blank"
@@ -50,6 +47,18 @@ const Project = async () => {
                     className="cursor-pointer"
                   />
                 </Link>
+                <div className="flex text-xs md:text-lg space-x-2">
+                  {project.attributes.technologies.techs.map((t, index) => {
+                    return (
+                      <p
+                        key={index}
+                        className="bg-gray-300 rounded-md px-1 text-gray-700"
+                      >
+                        {t}
+                      </p>
+                    );
+                  })}
+                </div>
               </div>
             </div>
 
