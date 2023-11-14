@@ -1,9 +1,10 @@
-import { useGetData } from '@/hooks/useGetData';
-import { SkillsProps } from '@/types';
+import { dataSkills } from '@/data/dataSkills';
+// import { useGetData } from '@/hooks/useGetData';
+// import { SkillsProps } from '@/types';
 import Image from 'next/image';
 
 const Skills = async () => {
-  const { data }: SkillsProps = await useGetData('/skills?populate=image');
+  // const { data }: SkillsProps = await useGetData('/skills?populate=image');
 
   return (
     <div className="container mx-auto">
@@ -12,7 +13,7 @@ const Skills = async () => {
       </h2>
 
       <div className="grid grid-cols-3 md:grid-cols-5 w-10/12 mx-auto mt-4 py-12">
-        {data.map((skill) => {
+        {dataSkills.map((skill) => {
           return (
             <div key={skill.id} className="m-4 flex justify-center">
               <Image
