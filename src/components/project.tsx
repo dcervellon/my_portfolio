@@ -1,20 +1,25 @@
-import { useGetData } from '@/hooks/useGetData';
-import { ProjectsProps } from '@/types';
+// import { useGetData } from '@/hooks/useGetData';
+// import { ProjectsProps } from '@/types';
 import Image from 'next/image';
 import React from 'react';
 import { BsGlobe2 } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import Link from 'next/link';
+import { dataWorks } from '@/data/dataWorks';
+
 
 const Project = async () => {
-  const { data }: ProjectsProps = await useGetData('/works?populate=image');
+  // const { data }: ProjectsProps = await useGetData('/works?populate=image');
 
   return (
     <div>
-      {data.map((project, index) => {
+      {dataWorks.map((project, index) => {
         return (
-          <div key={project.id} className="my-20">
-            <div className="md:w-12/12 mx-auto text-start md:text-3xl my-4">
+          <div
+            key={project.id}
+            className="my-20"
+          >
+            <div className="md:w-8/12 mx-auto text-start md:text-3xl my-4">
               <h2 className="text-[#0087d1] font-black">
                 <span>{index + 1}. </span>
                 {project.attributes.title}:
